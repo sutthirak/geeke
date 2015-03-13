@@ -1,0 +1,28 @@
+slackToken:
+
+site:
+  - url: https://www.blognone.com
+    intervalInMinute: 5
+    slackChannel:
+    username: geeke
+    linkPattern: "h2[itemprop] a"
+    absoluteTarget: false
+
+database:
+  driverClass: com.mysql.jdbc.Driver
+  user:
+  password:
+  url: jdbc:mysql://localhost/geeke?useUnicode=true&characterEncoding=UTF-8
+  properties:
+    charSet: UTF-8
+  maxWaitForConnection: 1s
+  validationQuery: "/* MyService Health Check */ SELECT 1"
+  validationQueryTimeout: 3s
+  minSize: 8
+  maxSize: 32
+  checkConnectionWhileIdle: false
+  evictionInterval: 10s
+  minIdleTime: 1 minute
+
+logging:
+  level: INFO
